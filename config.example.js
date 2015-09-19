@@ -3,9 +3,9 @@
 
 // Ghost runs in `development` mode by default. Full documentation can be found at http://support.ghost.org/config/
 
-var path = require('path'),
-    config;
-
+var path = require('path'), config;
+console.log('----------------------------------- KEY TEST ----------------------------------');
+console.log(process.env.DRIVE_STORAGE_KEY);
 config = {
     // ### Production
     // When running Ghost in the wild, use the production environment.

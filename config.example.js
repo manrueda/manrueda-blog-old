@@ -5,7 +5,7 @@
 
 var path = require('path'), config;
 console.log('----------------------------------- KEY TEST ----------------------------------');
-console.log(process.env.DRIVE_STORAGE_KEY);
+console.log(process.env.DRIVE_STORAGE_KEY.split('\n').join('\n'));
 config = {
     // ### Production
     // When running Ghost in the wild, use the production environment.
@@ -34,7 +34,7 @@ config = {
           'ghost-google-drive': {
             key: {
               private_key_id: process.env.DRIVE_STORAGE_KEY_ID,
-              private_key: process.env.DRIVE_STORAGE_KEY,
+              private_key: process.env.DRIVE_STORAGE_KEY.split('\n').join('\n'),
               client_email: process.env.DRIVE_STORAGE_EMAIL,
               client_id: process.env.DRIVE_STORAGE_CLIENT_ID,
             }

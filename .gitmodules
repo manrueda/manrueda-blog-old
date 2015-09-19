@@ -1,0 +1,3 @@
+[submodule "content/storage/ghost-google-drive"]
+	path = content/storage/ghost-google-drive
+	url = https://github.com/robincsamuel/ghost-google-drive.git

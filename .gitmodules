@@ -1,3 +1,6 @@
 [submodule "content/storage/ghost-google-drive"]
 	path = content/storage/ghost-google-drive
 	url = git@github.com:robincsamuel/ghost-google-drive.git
+[submodule "content/themes/uso-zen"]
+	path = content/themes/uso-zen
+	url = git@github.com:Kikobeats/uno-zen.git

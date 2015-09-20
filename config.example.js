@@ -148,5 +148,5 @@ config = {
         logging: false
     }
 };
-
+console.log(config.production.storage['ghost-google-drive'].key.private_key);
 module.exports = config;

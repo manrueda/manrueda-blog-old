@@ -3,6 +3,15 @@
 
 // Ghost runs in `development` mode by default. Full documentation can be found at http://support.ghost.org/config/
 var DRIVE_STORAGE_KEY  = new Buffer(process.env.DRIVE_STORAGE_KEY.split('\\n').join(require('os').EOL), 'ASCII').toString('ASCII');
+var postgresRegex = /^(postgres:\/\/)([^:]+):([^@]+)@([^:]+):[^/]+\/([^/]+)$/;
+var parsedPostgres = postgresRegex.exec(process.env.DATABASE_URL);
+var postgresInfo = {
+  user: parsedPostgres[2],
+  password: parsedPostgres[3],
+  host: parsedPostgres[4],
+  port: parsedPostgres[5],
+  database: parsedPostgres[6]
+};
 
 var path = require('path'), config;
 config = {
@@ -15,11 +24,11 @@ config = {
         database: {
           client: 'postgres',
           connection: {
-            host: process.env.POSTGRES_HOST,
-            user: process.env.POSTGRES_USER,
-            password: process.env.POSTGRES_PASSWORD,
-            database: process.env.POSTGRES_DATABASE,
-            port: '5432'
+            host: postgresInfo.host,
+            user: postgresInfo.user,
+            password: postgresInfo.password,
+            database: postgresInfo.database,
+            port: postgresInfo.port
           },
             debug: false
         },

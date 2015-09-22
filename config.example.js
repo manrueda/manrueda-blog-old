@@ -3,7 +3,7 @@
 
 // Ghost runs in `development` mode by default. Full documentation can be found at http://support.ghost.org/config/
 var DRIVE_STORAGE_KEY  = new Buffer(process.env.DRIVE_STORAGE_KEY.split('\\n').join(require('os').EOL), 'ASCII').toString('ASCII');
-var postgresRegex = /^(postgres:\/\/)([^:]+):([^@]+)@([^:]+):[^/]+\/([^/]+)$/;
+var postgresRegex = /^(postgres:\/\/)([^:]+):([^@]+)@([^:]+):([^\/]+)\/([^/]+)$/;
 var parsedPostgres = postgresRegex.exec(process.env.DATABASE_URL);
 var postgresInfo = {
   user: parsedPostgres[2],

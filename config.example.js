@@ -35,7 +35,7 @@ config = {
 
         server: {
             host: '0.0.0.0',
-            port: process.env.PORT || '2368'
+            port: process.env.OPENSHIFT_NODEJS_PORT || '2368'
         },
         storage: {
           active: 'ghost-google-drive',

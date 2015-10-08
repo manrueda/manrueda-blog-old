@@ -20,7 +20,7 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: process.env.SITE_URL,
-        mail: mail: {
+        mail: {
           transport: 'SMTP',
           options: {
             service: 'Mailgun',

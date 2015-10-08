@@ -19,7 +19,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://manrueda.com.ar/',
+        url: process.env.SITE_URL,
         mail: {},
         database: {
           client: 'postgres',

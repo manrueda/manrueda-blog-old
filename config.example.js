@@ -21,6 +21,7 @@ config = {
     production: {
         url: process.env.SITE_URL,
         mail: {
+          from: process.env.EMAIL_ADDRESS,
           transport: 'SMTP',
           options: {
             service: 'Mailgun',

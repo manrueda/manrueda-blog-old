@@ -13,6 +13,11 @@ express = require('express');
 ghost = require('./core');
 errors = require('./core/server/errors');
 
+//add support for PM2 keymetrics
+require('pmx').init({
+  http : true
+});
+
 // Create our parent express app instance.
 parentApp = express();
 

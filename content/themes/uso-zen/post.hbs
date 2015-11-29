@@ -16,7 +16,7 @@
       </div>
 
       <a alt="Tweet '{{title}}'" rel="me"
-        href="javascript:window.open('http://twitter.com/share?hashtags={{tags separator="," autolink="false"}}&text={{title}} » ', '_blank', 'width=400,height=500');void(0);">
+        href="javascript:window.open('http://twitter.com/intent/tweet?hashtags={{tags separator="," autolink="false"}}&text={{title}} » &url=' + window.location.href, '_blank');">
         {{#if image}}<img id="post-image" src={{image}} alt="{{{title}}}">{{/if}}
         <h1 class="icon-reverse icon-social-twitter-post" id="post-title">{{{title}}}</h1>
       </a>

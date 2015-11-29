@@ -21,10 +21,10 @@
       </a>
       
       <script type="text/javascript">
-        window.onload = function(){
+        window.onload = function(e){
           document.getElementById('twitterLink').onclick = function(){
             window.open('http://twitter.com/intent/tweet?hashtags={{tags separator="," autolink="false"}}&text={{title}} » &url=' + window.location.href, '_blank');
-            return false;
+            e.preventDefault();
           }
         }
       </script>
